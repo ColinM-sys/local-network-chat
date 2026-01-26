@@ -8,15 +8,39 @@
 </head>
 <body>
     <div class="container">
-        <!-- Join Screen -->
-        <div id="join-screen" class="screen">
+        <!-- Home Screen -->
+        <div id="home-screen" class="screen">
             <div class="join-box">
-                <h1>Welcome to Chat</h1>
+                <h1>Quick Chat</h1>
+                <p class="room-info">No signup required</p>
+                <div class="options">
+                    <button id="join-lobby-btn" class="btn primary">Join Public Chat</button>
+                    <div class="divider">or</div>
+                    <button id="create-private-btn" class="btn secondary">Create Private Chat</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Private Room Created Screen -->
+        <div id="private-created-screen" class="screen hidden">
+            <div class="join-box">
+                <h1>Private Chat Created</h1>
+                <p class="room-info">Share this link with others to chat privately:</p>
+                <div class="link-box">
+                    <input type="text" id="private-link" readonly>
+                    <button id="copy-private-link-btn" class="btn small">Copy</button>
+                </div>
+                <button id="join-private-btn" class="btn primary">Enter Chat</button>
+            </div>
+        </div>
+
+        <!-- Join Screen (for entering nickname) -->
+        <div id="join-screen" class="screen hidden">
+            <div class="join-box">
+                <h1>Enter Chat</h1>
                 <p id="room-info" class="room-info"></p>
                 <input type="text" id="username-input" placeholder="Enter your nickname" maxlength="20">
                 <button id="join-btn" class="btn primary">Join Chat</button>
-                <div class="divider">or</div>
-                <button id="create-room-btn" class="btn secondary">Create Private Room</button>
             </div>
         </div>
 
